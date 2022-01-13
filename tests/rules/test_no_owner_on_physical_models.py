@@ -12,50 +12,103 @@ def manifest() -> Manifest:
                 "physical_node_1": {
                     "unique_id": "physical_node_1",
                     "resource_type": "model",
-                    "config": {"materialized": "view"},
-                    "meta": {"owner": "Joe"}
+                    "config":
+                        {
+                            "materialized": "view",
+                            "meta":
+                                {
+                                    "owner": "Oliver Twist",
+                                    "team_owner": "The Juvenile Pickpockets"
+                                },
+                        },
                 },
                 "physical_node_2": {
                     "unique_id": "physical_node_2",
                     "resource_type": "model",
-                    "config": {"materialized": "table"},
-                    "meta": {"owner": "Joe"}
+                    "config":
+                        {
+                            "materialized": "table",
+                            "meta":
+                                {
+                                    "owner": "Artful Dodger",
+                                    "team_owner": "The Juvenile Pickpockets"
+                                },
+                        },
                 },
                 "physical_node_3": {
                     "unique_id": "physical_node_3",
                     "resource_type": "model",
-                    "config": {"materialized": "incremental"},
-                    "meta": {"owner": "Joe"}
+                    "config":
+                        {
+                            "materialized": "incremental",
+                            "meta":
+                                {
+                                    "owner": "Charley Bates",
+                                    "team_owner": "The Juvenile Pickpockets"
+                                },
+                        },
                 },
                 "ephemeral_node_1": {
                     "unique_id": "ephemeral_node_1",
                     "resource_type": "model",
-                    "config": {"materialized": "ephemeral"},
-                    "meta": {"owner": "Joe"}
+                    "config":
+                        {
+                            "materialized": "ephemeral",
+                            "meta":
+                                {
+                                    "owner": "Oliver Twist",
+                                    "team_owner": "The Juvenile Pickpockets"
+                                },
+                        },
                 },
                 "ephemeral_node_2": {
                     "unique_id": "ephemeral_node_2",
                     "resource_type": "model",
-                    "config": {"materialized": "ephemeral"},
-                    "meta": {}
+                    "config":
+                        {
+                            "materialized": "ephemeral",
+                            "meta":
+                                {},
+                        },
                 },
                 "no_owner_physical_node_1": {
                     "unique_id": "no_owner_physical_node_1",
                     "resource_type": "model",
-                    "config": {"materialized": "incremental"},
-                    "meta": {}
+                    "config":
+                        {
+                            "materialized": "ephemeral",
+                            "meta":
+                                {
+                                    "owner": "",
+                                    "team_owner": ""
+                                },
+                        },
                 },
                 "no_owner_physical_node_2": {
                     "unique_id": "no_owner_physical_node_2",
                     "resource_type": "model",
-                    "config": {"materialized": "incremental"},
-                    "meta": {"owner": ""}
+                    "config":
+                        {
+                            "materialized": "incremental",
+                            "meta":
+                                {
+                                    "owner": "",
+                                    "team_owner": ""
+                                },
+                        },
                 },
                 "no_owner_physical_node_3": {
                     "unique_id": "no_owner_physical_node_3",
                     "resource_type": "model",
-                    "config": {"materialized": "incremental"},
-                    "meta": {"owner": "   "}
+                    "config":
+                        {
+                            "materialized": "incremental",
+                            "meta":
+                                {
+                                    "owner": "   ",
+                                    "team_owner": "   "
+                                },
+                        },
                 },
             },
             "child_map": {
@@ -77,22 +130,26 @@ def manifest() -> Manifest:
                 "source_1": {
                     "unique_id": "source_1",
                     "resource_type": "source",
-                    "meta": {"owner": "Joe"}
+                    "config":
+                        {"meta": {"owner": "Oliver Twist"}}
                 },
                 "no_owner_source_1": {
                     "unique_id": "no_owner_source_1",
                     "resource_type": "source",
-                    "meta": {"owner": "  "}
+                    "config":
+                        {"meta": {"owner": ""}}
                 },
                 "no_owner_source_2": {
                     "unique_id": "no_owner_source_2",
                     "resource_type": "source",
-                    "meta": {"owner": ""}
+                    "config":
+                        {"meta": {"owner": "  "}}
                 },
                 "no_owner_source_3": {
                     "unique_id": "no_owner_source_3",
                     "resource_type": "source",
-                    "meta": {}
+                    "config":
+                        {"meta": {"owner": "  "}}
                 },
 
             },
