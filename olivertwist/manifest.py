@@ -89,7 +89,7 @@ class Node:
 
     @property
     def owner(self) -> Optional[str]:
-        return self.data.get("meta", {}).get("owner", None)
+        return self.data.get("config", {}).get("meta", {}).get("owner", None)
 
     @property
     def area(self) -> str:
