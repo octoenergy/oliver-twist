@@ -93,7 +93,22 @@ class Node:
 
     @property
     def area(self) -> str:
-        return self.data["fqn"][2]
+        print(self.data["fqn"])
+        if self.data["resource_type"] == "model":
+            return self.data["fqn"][2]
+        elif self.data["resource_type"] == "test":
+            if "stg_" in self.id:
+                return "staging"
+            elif "wh_" in self.id:
+                return "warehouse"
+            elif "inter_" in self.id:
+                return "intermediate"
+            elif "fnl_" in self.id:
+                return "final"
+            else:
+                return None
+        else:
+            return self.data["fqn"][2]
 
     def __fqn_contains(self, namespace: str) -> bool:
         return namespace in self.data.get("fqn", [])
