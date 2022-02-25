@@ -92,6 +92,10 @@ class Node:
         return self.data.get("config", {}).get("meta", {}).get("owner", None)
 
     @property
+    def materialization(self) -> str:
+        return self.data.get("config", {}).get("materialized", {})
+
+    @property
     def area(self) -> str:
         print(self.data["fqn"])
         if self.data["resource_type"] == "model":
